@@ -1,10 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Home - Blog</title>
+    <title>Home Page</title>
 </head>
 <body>
-    <h1>Welcome to My Blog!</h1>
-    <p><a href="create">Create a New Post</a></p>
+    <h2>Welcome to the Blog</h2>
+
+    <!-- Link to view all posts -->
+    <a href="index">View All Posts</a>
+    <br>
+
+    <!-- Link to create a new post -->
+    <a href="create">Create New Post</a>
 </body>
 </html>

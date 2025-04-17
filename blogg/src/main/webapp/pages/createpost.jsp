@@ -1,16 +1,13 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Create Post</title>
-</head>
-<body>
-    <h2>Create a New Blog Post</h2>
-    <form action="create" method="post">
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title" required><br><br>
-        <label for="content">Content:</label><br>
-        <textarea id="content" name="content" rows="4" cols="50" required></textarea><br><br>
+<form action="create" method="post">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title" required />
+    </div>
+    <div>
+        <label for="content">Content:</label>
+        <textarea name="content" rows="5" required></textarea>
+    </div>
+    <div>
         <button type="submit">Submit Post</button>
-    </form>
-</body>
-</html>
+    </div>
+</form>
