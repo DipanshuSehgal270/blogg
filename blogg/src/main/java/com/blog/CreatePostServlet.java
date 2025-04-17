@@ -1,9 +1,7 @@
 package com.blog;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,12 +31,13 @@ public class CreatePostServlet extends HttpServlet {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            // Optionally, set an error attribute and forward to the form
             request.setAttribute("error", "Failed to save post to the database.");
             request.getRequestDispatcher("/pages/createpost.jsp").forward(request, response);
             return;
         }
 
-        // After inserting, redirect to the homepage (index.jsp)
+        // After inserting, redirect back to the homepage
         response.sendRedirect("index.jsp");
     }
 }

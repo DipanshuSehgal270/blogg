@@ -10,17 +10,47 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>IndexServlet</servlet-name>
-    <url-pattern>/index</url-pattern>
+    <url-pattern>/home</url-pattern>
   </servlet-mapping>
 
-  <!-- Mapping for CreatePostServlet (if needed) -->
   <servlet>
     <servlet-name>CreatePostServlet</servlet-name>
     <servlet-class>com.blog.CreatePostServlet</servlet-class>
   </servlet>
+
   <servlet-mapping>
     <servlet-name>CreatePostServlet</servlet-name>
     <url-pattern>/create</url-pattern>
   </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>EditPostServlet</servlet-name>
+    <servlet-class>com.blog.EditPostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditPostServlet</servlet-name>
+    <url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeletePostServlet</servlet-name>
+    <servlet-class>com.blog.DeletePostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeletePostServlet</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ViewPostServlet</servlet-name>
+    <servlet-class>com.blog.ViewPostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewPostServlet</servlet-name>
+    <url-pattern>/view</url-pattern>
+  </servlet-mapping>
+
+
 
 </web-app>
