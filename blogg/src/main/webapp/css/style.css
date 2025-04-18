@@ -59,3 +59,46 @@ body {
     background-color: #dc3545;
     color: white;
 }
+
+.input-box, .textarea-box {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.textarea-box {
+    width: 100%;
+    resize: vertical;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: #e67e22;
+}
+
+.post-content {
+    white-space: pre-wrap;     /* preserves line breaks and wraps long text */
+    word-wrap: break-word;     /* breaks long words if needed */
+    overflow-wrap: break-word;
+    max-width: 100%;
+}

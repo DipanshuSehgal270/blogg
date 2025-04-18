@@ -1,21 +1,26 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Create New Post</title>
+    <title>Create Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <h2>Create a New Post</h2>
-    <form action="create" method="post">
-        <label for="title">Title:</label>
-        <input type="text" name="title" required />
-
-        <label for="content">Content:</label>
-        <textarea name="content" rows="5" required></textarea>
-
-        <button type="submit">Submit Post</button>
-    </form>
-</div>
+    <div class="container">
+        <h2 class="title">Create New Post</h2>
+        <form action="create" method="post">
+            <div class="form-group">
+                <label for="title">Title:</label><br/>
+                <input type="text" name="title" required class="input-box"/>
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label><br/>
+                <textarea name="content" rows="5" required class="textarea-box"></textarea>
+            </div>
+            <button type="submit" class="btn create-btn">Submit Post</button>
+        </form>
+        <br/>
+        <a class="btn view" href="index.jsp">Back to Home</a>
+    </div>
 </body>
 </html>
