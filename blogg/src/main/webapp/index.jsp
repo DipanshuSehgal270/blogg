@@ -18,21 +18,27 @@
 %>
 
 <html>
-<head><title>Home - Blog</title></head>
+<head>
+    <title>Home - Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-    <h2>All Posts</h2>
-    <a href="create">Create New Post</a>
-    <hr/>
-    <%
-        for (Map<String, String> post : posts) {
-    %>
-        <h3><%= post.get("title") %></h3>
-        <a href="view?id=<%= post.get("id") %>">View</a> |
-        <a href="edit?id=<%= post.get("id") %>">Edit</a> |
-        <a href="delete?id=<%= post.get("id") %>">Delete</a>
+    <div class="container">
+        <h2 class="title">All Posts</h2>
+        <a class="btn create-btn" href="create">+ Create New Post</a>
         <hr/>
-    <%
-        }
-    %>
+
+        <% for (Map<String, String> post : posts) { %>
+            <div class="post-card">
+                <h3><%= post.get("title") %></h3>
+                <div class="actions">
+                    <a class="btn view" href="view?id=<%= post.get("id") %>">View</a>
+                    <a class="btn edit" href="edit?id=<%= post.get("id") %>">Edit</a>
+                    <a class="btn delete" href="delete?id=<%= post.get("id") %>">Delete</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
 </body>
 </html>
